@@ -10,6 +10,7 @@ public class Test implements CommandLineRunner{
     int a=20;
     System.out.println(a*a);
     System.out.println("new comment");
+    System.out.println("new comment");
 	}
 
 	
