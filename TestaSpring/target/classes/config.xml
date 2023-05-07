@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd 
+        
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd 
+        
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
+        
+  <context:property-placeholder location="data.properties"/>
+  <context:annotation-config></context:annotation-config>
+  <context:component-scan base-package="com.entity"></context:component-scan>
+  
+  <import resource="test.xml"/>
+  
+	<bean class="com.entity.Employee" name="emp1" init-method="init"
+		destroy-method="destroy" p:empId="${id}" p:empName="${name}"
+		p:empSal="${sal}">
+	</bean>
+	<bean class="com.entity.Employee" name="emp2" init-method="init"
+		destroy-method="destroy" p:empId="2" p:empName="rajuking"
+		p:empSal="44.4">
+	</bean>
+	<bean class="com.entity.Product" name="prod" p:prodId="1">
+		<property name="map">
+			<map>
+				<entry key="1" value="a"></entry>
+				<entry key="12" value="b"></entry>
+				<entry key="13" value="ca"></entry>
+			</map>
+		</property>
+		<property name="model">
+			<list>
+				<value>a</value>
+				<value>ab</value>
+				<value>avc</value>
+			</list>
+		</property>
+	    <property name="prop">
+	    <props>
+	    <prop key="a">a</prop>
+	    <prop key="b">b</prop>
+	    <prop key="c">c</prop>
+	    </props>
+	    </property>
+	
+	</bean>
+	
+
+</beans>
