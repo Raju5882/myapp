@@ -7,7 +7,9 @@ public class Test implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-    System.out.println("test");		
+    System.out.println("test");	
+    System.out.println("update Test");	
+		
 	}
 
 	
