@@ -12,6 +12,7 @@ public class Test implements CommandLineRunner{
     System.out.println("new comment");
     System.out.println("new comment");
     System.out.println();
+    Employee e=new Employee();
 	}
 
 	
