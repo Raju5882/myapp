@@ -10,8 +10,4 @@ public class Test implements CommandLineRunner{
     int a=20;
     Employee e=new Employee();
 	}
-
-	
-	
-	
 }
