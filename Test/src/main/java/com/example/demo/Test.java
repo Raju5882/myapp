@@ -11,6 +11,7 @@ public class Test implements CommandLineRunner{
     System.out.println(a*a);
     System.out.println("new comment");
     System.out.println("new comment");
+    System.out.println();
 	}
 
 	
