@@ -9,6 +9,7 @@ public class Test implements CommandLineRunner{
 	public void run(String... args) throws Exception {
     int a=20;
     System.out.println(a*a);
+    System.out.println("new comment");
 	}
 
 	
